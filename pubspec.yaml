@@ -1,0 +1,41 @@
+name: kalkulatorku
+description: Aplikasi Kalkulator Sederhana.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.5
+  shared_preferences: ^2.2.2
+  google_fonts: ^6.1.0
+  math_expressions: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_native_splash: ^2.3.9
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.png   # Gambar loading screen (splash)
+    - assets/icon.png   # Gambar di HomeScreen
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/logo.png
+  android: true
+  ios: true
+  web: false
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
