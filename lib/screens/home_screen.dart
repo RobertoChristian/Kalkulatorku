@@ -26,20 +26,25 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Menampilkan logo dari assets
-            Image.asset(
-              'assets/icon.png',
-              width: 250,
-              height: 250,
+            // Melengkungkan ujung foto (logo)
+            ClipRRect(
+              borderRadius: BorderRadius.circular(30), // Radius untuk melengkungkan
+              child: Image.asset(
+                'assets/icon.png',
+                width: 250,
+                height: 250,
+                fit: BoxFit.cover, // Untuk memastikan gambar tidak terdistorsi
+              ),
             ),
             const SizedBox(height: 50), // Jarak antara logo dan tombol
 
             ElevatedButton(
               child: const Text('Buka Kalkulator'),
               onPressed: () {
+                // Menghapus 'const' karena tidak perlu di sini
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const CalculatorScreen()),
+                  MaterialPageRoute(builder: (_) => CalculatorScreen()),
                 );
               },
             ),
@@ -47,9 +52,10 @@ class HomeScreen extends StatelessWidget {
             ElevatedButton(
               child: const Text('Tentang'),
               onPressed: () {
+                // Menghapus 'const' karena tidak perlu di sini
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const AboutScreen()),
+                  MaterialPageRoute(builder: (_) => AboutScreen()),
                 );
               },
             ),
