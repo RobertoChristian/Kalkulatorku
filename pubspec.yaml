@@ -1,5 +1,5 @@
 name: kalkulatorku
-description: Aplikasi Kalkulator Sederhana.
+description: Aplikasi Kalkulator Sederhana dengan Scientific Mode
 
 publish_to: 'none'
 
@@ -12,21 +12,22 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^6.0.5
-  shared_preferences: ^2.2.2
   google_fonts: ^6.1.0
-  math_expressions: ^2.1.0
+  math_expressions: ^2.2.0 # Digunakan untuk perhitungan matematika
+  shared_preferences: ^2.2.2 # Digunakan untuk menyimpan tema dan riwayat
+  intl: ^0.18.0 # Gunakan versi terbaru dari intl atau versi yang lebih stabil
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_native_splash: ^2.3.9
   flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.9
 
 flutter:
   uses-material-design: true
   assets:
-    - assets/logo.png   # Gambar loading screen (splash)
-    - assets/icon.png   # Gambar di HomeScreen
+    - assets/logo.png
+    - assets/icon.png
 
 flutter_native_splash:
   color: "#ffffff"
